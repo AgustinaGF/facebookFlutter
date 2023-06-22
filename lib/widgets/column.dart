@@ -18,14 +18,16 @@ class MyColumn extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
+                  // de esta manera esta container va ocupar el doble que el otro container
+                  flex: 2,
                   child: Container(
-                    height: 100,
                     color: Colors.pinkAccent,
                   ),
                 ),
-                Container(
-                  height: 100,
-                  color: Colors.blue,
+                Expanded(
+                  child: Container(
+                    color: Colors.blue,
+                  ),
                 ),
               ],
             ),
