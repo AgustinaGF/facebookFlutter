@@ -16,9 +16,19 @@ class MyColumn extends StatelessWidget {
           child: Container(
             color: Colors.grey,
             child: Column(
-              //de esta manera va a posicionar los container en cada extremo de la pagina
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                const Text('Hello'),
+                const Text(
+                  'World',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                //este solo puede ser utilizado dentro de un column o dentro de un row
+                const Spacer(),
+                // el widget Space solo va a crear un espacio entre los elementos
                 Container(
                   height: 100,
                   color: Colors.pinkAccent,
