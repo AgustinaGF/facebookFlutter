@@ -10,23 +10,23 @@ class MyRow extends StatelessWidget{
       // el widget Row nos permite posicionar los elementos uno al lado del otro
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children:[
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.red
+            Expanded(
+              flex: 2,
+              child: Container(
+                width: 50,
+                height: 50,
+                color: Colors.red
+                      ),
+            ),
+          Expanded(
+            child: Container(
+                width: 50,
+                height: 50,
+                color: Colors.blue
+            ),
           ),
-          Container(
-              width: 50,
-              height: 50,
-              color: Colors.blue
-          ),
-          Container(
-              width: 50,
-              height: 100,
-              color: Colors.green
-          )
           ],
           ),
       );
