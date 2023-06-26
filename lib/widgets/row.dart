@@ -12,21 +12,12 @@ class MyRow extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children:[
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: 50,
-                height: 50,
-                color: Colors.red
-                      ),
-            ),
-          Expanded(
-            child: Container(
-                width: 50,
+          
+             Container(
+                width: 450,
                 height: 50,
                 color: Colors.blue
             ),
-          ),
           ],
           ),
       );
