@@ -13,20 +13,9 @@ class MyRow extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children:[
-          Flexible(
-            fit: FlexFit.tight,
-            child:   Container(
-                width: 50,
-                height: 50,
-                color: Colors.blue
-            ),),
-           
-            // este widget hace responsive los contenedores y evita los problemas de overflow
-           Flexible(child: Container(
-              width: 50,
-              height:50 ,
-              color: Colors.red
-            ))
+         Flexible(child: FlutterLogo(size:100,)),
+         Flexible(child: FlutterLogo(size:200,)),
+         Flexible(child: FlutterLogo(size:250,)),
           ],
           ),
       );
