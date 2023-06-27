@@ -12,10 +12,11 @@ class MyScaffold extends StatelessWidget {
       onEndDrawerChanged: (isOpen) {
         print(isOpen);
       },
+      bottomNavigationBar:BottomNavigationBar(items: const [BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")]),
       floatingActionButton: FloatingActionButton(
       child: const Icon(Icons.add, size: 30,),  
-      onPressed:(){}),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      onPressed:(){print('press button');}),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       endDrawer: const Drawer(
         elevation: 0,
         child: Column(
