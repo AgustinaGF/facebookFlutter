@@ -12,6 +12,7 @@ class MyScaffold extends StatelessWidget {
       ),
     backgroundColor: const Color(0xff01579b),
     elevation: 10,
+    shadowColor: Colors.red,
     titleTextStyle: const TextStyle(color: Colors.white, fontSize: 18,),title:const Row(mainAxisSize: MainAxisSize.min,children: [Text('Flutter App')]),)
     );
   }
