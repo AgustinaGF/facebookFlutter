@@ -7,7 +7,11 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-
+      //esta prop permite que se desahabilite la posibilidad de abrir deslizando el drawer
+      endDrawerEnableOpenDragGesture:false,
+      onEndDrawerChanged: (isOpen) {
+        print(isOpen);
+      },
       endDrawer: const Drawer(
         elevation: 0,
         child: Column(
