@@ -14,7 +14,9 @@ class MyStack extends StatelessWidget{
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Positioned(top:0, left:0, right: 10,child: Container(width: 150,height: 150,color: Colors.green,),)
+          Positioned(
+            //si asigno left y right lo que va a hacer es posicionar el elemento dejando espacio tanto a la izquierda como a la derecha
+            top:0, left:0, right:0,bottom: 0,child: Container(height: 150,color: Colors.green,child: const Text('mundo'),),)
           ,
            Container(width: 50,height: 50,color: Colors.red,),
            const Text('Hola'),
