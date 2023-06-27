@@ -12,6 +12,10 @@ class MyScaffold extends StatelessWidget {
       onEndDrawerChanged: (isOpen) {
         print(isOpen);
       },
+      floatingActionButton: FloatingActionButton(
+      child: const Icon(Icons.add, size: 30,),  
+      onPressed:(){}),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       endDrawer: const Drawer(
         elevation: 0,
         child: Column(
