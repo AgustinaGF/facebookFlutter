@@ -14,7 +14,7 @@ class MyStack extends StatelessWidget{
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Positioned(top:0, left:0,child: Container(width: 150,height: 150,color: Colors.green,),)
+          Positioned(top:0, left:0, right: 10,child: Container(width: 150,height: 150,color: Colors.green,),)
           ,
            Container(width: 50,height: 50,color: Colors.red,),
            const Text('Hola'),
