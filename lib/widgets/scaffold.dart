@@ -7,6 +7,21 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      body:Container(color:Colors.grey,width: double.infinity, height: double.infinity,
+        child: const Column(
+          children:[
+            Expanded(
+            child:Center(
+              child:Padding(padding: EdgeInsets.symmetric(horizontal:25),
+              child:TextField(),
+             ),
+            ),
+            ),
+            Text('Hello world'), SizedBox(height: 50,)],
+          
+        )
+      ),
+      
       //esta prop permite que se desahabilite la posibilidad de abrir deslizando el drawer
       endDrawerEnableOpenDragGesture:false,
       onEndDrawerChanged: (isOpen) {
@@ -18,14 +33,12 @@ class MyScaffold extends StatelessWidget {
       onPressed:(){print('press button');}),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       endDrawer: const Drawer(
-        elevation: 0,
         child: Column(
           children:  [
             SizedBox(height: 40,),
             Text("test@test.com", style: TextStyle(color: Colors.black))
           ],
         ),
-        
       ),
       appBar: AppBar(
       systemOverlayStyle: const SystemUiOverlayStyle(
