@@ -9,7 +9,24 @@ class MySingleChildScrollView extends StatelessWidget {
       bottom: false,
       child: Column(
         children: [
-          Text('Hello'),
+          Container(
+            height: 100,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(
+                  18,
+                  (index) => Container(
+                    color: Colors.primaries[index],
+                    height: 100,
+                    width: 100,
+                    alignment: Alignment.center,
+                    child: Text('$index'),
+                  ),
+                ),
+              ),
+            ),
+          ),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
