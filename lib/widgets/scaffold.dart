@@ -12,13 +12,14 @@ class MyScaffold extends StatelessWidget {
           children:[
             Expanded(
             child:Center(
-              child:Padding(padding: EdgeInsets.symmetric(horizontal:25),
-              child:TextField(),
+              child:Padding(padding: EdgeInsets.symmetric(horizontal:25,
+              ),
+                child:TextField(),
              ),
             ),
             ),
-            Text('Hello world'), SizedBox(height: 50,)],
-          
+            Text('Hello world'), SizedBox(height: 50,),
+            ],
         )
       ),
       
@@ -48,7 +49,10 @@ class MyScaffold extends StatelessWidget {
     backgroundColor: const Color(0xff01579b),
     elevation: 10,
     shadowColor: Colors.red,
-    titleTextStyle: const TextStyle(color: Colors.white, fontSize: 18),title:const Row(mainAxisAlignment: MainAxisAlignment.center,mainAxisSize: MainAxisSize.min,children: [Text('Flutter App'), ]),)
+    titleTextStyle: const TextStyle(color: Colors.white, fontSize: 18),
+    actions: [IconButton(onPressed:(){}, icon:const Icon(Icons.settings),),
+    IconButton(onPressed:(){},icon:Icon(Icons.logout)),],
+    title:const Row(mainAxisAlignment: MainAxisAlignment.center,mainAxisSize: MainAxisSize.min,children: [Text('Flutter App'), ]),)
     );
   }
 }
