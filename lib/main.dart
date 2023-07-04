@@ -9,6 +9,7 @@ import 'widgets/safe_area.dart';
 import 'widgets/single_child_scroll_view.dart';
 import 'widgets/list_view.dart';
 import 'widgets/custom_font.dart';
+import 'widgets/custom_icons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CustomFont(),
+      home: CustomIcons(),
     );
   }
 }
