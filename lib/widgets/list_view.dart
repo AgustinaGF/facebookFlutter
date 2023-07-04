@@ -5,6 +5,7 @@ class MyListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        //al estar dentro del un Scaffold por defecto viene sin paddings
         padding: EdgeInsets.all(20),
         children: [
           Text('Hello'),

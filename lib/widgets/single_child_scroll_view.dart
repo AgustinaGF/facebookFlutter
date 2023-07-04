@@ -13,8 +13,7 @@ class MySingleChildScrollView extends StatelessWidget {
             height: 100,
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              // esta prop saca el efecto rebote del scroll
-              physics: ClampingScrollPhysics(),
+              physics: const ClampingScrollPhysics(),
               child: Row(
                 children: List.generate(
                   18,
