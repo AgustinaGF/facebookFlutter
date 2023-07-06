@@ -7,18 +7,12 @@ class CustomIcons extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Column(
-          children: [
-            CupertinoActivityIndicator(),
-            CupertinoSearchTextField(),
-            Icon(
-              CustomIcon.boot,
-              size: 100,
-              color: Color(0xffff0000),
-              // se utiliza para accesibilidad
-              semanticLabel: 'icono',
-            ),
-          ],
+        child: Icon(
+          CustomIcon.boot,
+          size: 100,
+          color: Color(0xffff0000),
+          // se utiliza para accesibilidad
+          semanticLabel: 'icono',
         ),
       ),
     );
