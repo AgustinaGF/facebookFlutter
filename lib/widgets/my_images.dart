@@ -5,7 +5,15 @@ class MyImages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset('assets/images/sailor.png'),
+        child: Container(
+          color: Colors.pink,
+          child: Image.asset(
+            'assets/images/sailor.png',
+            width: 200,
+            height: 300,
+            fit: BoxFit.fitHeight,
+          ),
+        ),
       ),
     );
   }
