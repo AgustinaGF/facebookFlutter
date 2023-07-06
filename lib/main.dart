@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'widgets/text.dart';
 import 'widgets/container.dart';
@@ -12,6 +11,7 @@ import 'widgets/list_view.dart';
 import 'widgets/custom_font.dart';
 import 'widgets/custom_icons.dart';
 import 'widgets/cupertino_scaffold.dart';
+import 'widgets/my_images.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,9 +23,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // hay widgets como Scaffold que no funcionan con Cupertino
-    return CupertinoApp(
-      home: MyCupertinoScaffold(),
+    return MaterialApp(
+      home: MyImages(),
     );
   }
 }
