@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../icons/custom_icon_icons.dart';
+import 'widgets/circle_button.dart';
 
 class FacebookUi extends StatelessWidget {
   @override
@@ -20,50 +21,15 @@ class FacebookUi extends StatelessWidget {
         width: 150,
       ),
       actions: [
-        Container(
-          width: 40,
-          height: 40,
-          decoration:
-              const BoxDecoration(color: Colors.grey, shape: BoxShape.circle),
-          child: const Icon(
-            CustomIcons.search,
-            color: Colors.white,
-            size: 16,
-          ),
-        ),
-        Container(
-          width: 40,
-          height: 40,
-          decoration:
-              const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
-          child: const Icon(
-            CustomIcons.bell,
-            color: Colors.white,
-            size: 16,
-          ),
-        ),
-        Container(
-          width: 40,
-          height: 40,
-          decoration: const BoxDecoration(
-              color: Colors.lightBlue, shape: BoxShape.circle),
-          child: const Icon(
-            CustomIcons.user_friends,
-            color: Colors.white,
-            size: 16,
-          ),
-        ),
-        Container(
-          width: 40,
-          height: 40,
-          decoration: const BoxDecoration(
-              color: Colors.blueAccent, shape: BoxShape.circle),
-          child: const Icon(
-            CustomIcons.messenger,
-            color: Colors.white,
-            size: 16,
-          ),
-        )
+        CircleButton(color: Color(0xffBFBFBF), iconData: CustomIcons.search),
+        SizedBox(width: 15),
+        CircleButton(color: Color(0xffFE7574), iconData: CustomIcons.bell),
+        SizedBox(width: 15),
+        CircleButton(
+            color: Color(0xff7BBAFF), iconData: CustomIcons.user_friends),
+        SizedBox(width: 15),
+        CircleButton(color: Color(0xff1C86E4), iconData: CustomIcons.messenger),
+        SizedBox(width: 15),
       ],
     ));
   }
