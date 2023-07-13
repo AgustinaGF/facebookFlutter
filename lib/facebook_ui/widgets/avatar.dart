@@ -10,10 +10,15 @@ class Avatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(size * 0.5,),
-        child: Image.asset(asset, width: size,
-        height: size,),
+        borderRadius: BorderRadius.circular(
+          size * 0.5,
+        ),
+        child: Image.asset(
+          asset,
+          width: size,
+          height: size,
+        ),
       ),
-    )
+    );
   }
 }
