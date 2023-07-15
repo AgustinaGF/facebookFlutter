@@ -1,18 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:faker/faker.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:widgest/facebook_ui/widgets/quick_actions.dart';
 import 'package:widgest/facebook_ui/widgets/stories.dart';
+import 'package:widgest/models/publication.dart';
 import '../icons/custom_icon_icons.dart';
+import '../models/publication.dart';
 import 'widgets/circle_button.dart';
 import 'widgets/what_is_on_your_mind.dart';
 
 class FacebookUi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final faker = Faker();
+    final publications = <Publication>[];
+    for (int i = 0; i < 50; i++) {
+      final random = faker.randomGenerator;
+      const reactions = Reaction.values;
+      final reactionIndex = random.integer(reactions.length - 1);
+      final publication = Publication(
+        user: User(avatar: faker.image.image(), username: faker.person.name()),
+        title: faker.lorem.sentence(),
+        createAt: faker.date.dateTime(),
+        imageUrl: faker.image.image(),
+        commentsCount: random.integer(50000),
+        sharesCount: random.integer(50000),
+        currentUserReaction: reactions[reactionIndex],
+      );
+      publications.add(publication);
+    }
+
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle(
+        systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarBrightness: Brightness.light,
         ),
         backgroundColor: Colors.transparent,
@@ -24,7 +45,7 @@ class FacebookUi extends StatelessWidget {
               const ColorFilter.mode(Colors.blueAccent, BlendMode.srcIn),
           width: 150,
         ),
-        actions: [
+        actions: const [
           CircleButton(color: Color(0xffBFBFBF), iconData: CustomIcons.search),
           SizedBox(width: 15),
           CircleButton(color: Color(0xffFE7574), iconData: CustomIcons.bell),
