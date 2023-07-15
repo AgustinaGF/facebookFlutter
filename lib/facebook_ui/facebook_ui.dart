@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:widgest/facebook_ui/widgets/publication_item.dart';
 import 'package:widgest/facebook_ui/widgets/quick_actions.dart';
 import 'package:widgest/facebook_ui/widgets/stories.dart';
 import 'package:widgest/models/publication.dart';
 import '../icons/custom_icon_icons.dart';
-import '../models/publication.dart';
 import 'widgets/circle_button.dart';
 import 'widgets/what_is_on_your_mind.dart';
 
@@ -62,19 +62,29 @@ class FacebookUi extends StatelessWidget {
         ],
       ),
       body: ListView(
-        children: const [
-          SizedBox(
+        children: [
+          const SizedBox(
             height: 10,
           ),
-          WhatIsOnYourMind(),
-          SizedBox(
+          const WhatIsOnYourMind(),
+          const SizedBox(
             height: 30,
           ),
-          QuickActions(),
-          SizedBox(
+          const QuickActions(),
+          const SizedBox(
             height: 30,
           ),
-          Stories(),
+          const Stories(),
+          const SizedBox(
+            height: 20,
+          ),
+          ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (_, index) =>
+                PublicationItem(publication: publications[index]),
+            itemCount: publications.length,
+          )
         ],
       ),
     );
