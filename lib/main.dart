@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       home: FacebookUi(),
+      theme: ThemeData(fontFamily: 'Nunito'),
     );
   }
 }
