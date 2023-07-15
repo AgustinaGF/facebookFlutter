@@ -7,24 +7,31 @@ class QuickActions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        QuickButton(
-          label: 'Gallery',
-          color: Color(0xff92BE87),
-          iconData: CustomIcons.photos,
-        ),
-        QuickButton(
-          label: 'Tag Friend',
-          color: Color(0xff2880D4),
-          iconData: CustomIcons.user_friends,
-        ),
-        QuickButton(
-          label: 'Like',
-          color: Color(0xfFFB7171),
-          iconData: CustomIcons.video_camera,
-        )
-      ],
+    //este widget ayuda a desaparecer el error de overflow
+    return const FittedBox(
+      fit: BoxFit.scaleDown,
+      alignment: Alignment.centerLeft,
+      child: Row(
+        children: [
+          QuickButton(
+            label: 'Gallery',
+            color: Color(0xff92BE87),
+            iconData: CustomIcons.photos,
+          ),
+          SizedBox(width: 15),
+          QuickButton(
+            label: 'Tag Friend',
+            color: Color(0xff2880D4),
+            iconData: CustomIcons.user_friends,
+          ),
+          SizedBox(width: 15),
+          QuickButton(
+            label: 'Like',
+            color: Color(0xfFFB7171),
+            iconData: CustomIcons.video_camera,
+          )
+        ],
+      ),
     );
   }
 }
@@ -51,9 +58,10 @@ class QuickButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           CircleButton(color: color.withOpacity(0.6), iconData: iconData),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Text(
             label,
             style: TextStyle(
