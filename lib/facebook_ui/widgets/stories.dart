@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:widgest/models/story.dart';
 
+import 'story_item.dart';
+
 final _stories = [
   Story(
       bg: 'assets/wallpapers/1.jpeg',
@@ -30,16 +32,14 @@ class Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 170,
+        height: 160,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemBuilder: (_, index) {
             final story = _stories[index];
-            return Container(
-              margin: EdgeInsets.symmetric(horizontal: 5),
-              width: 80,
-              height: double.infinity,
-              color: Colors.grey,
+            return StoryItem(
+              story: story,
+              isFirst: index == 0,
             );
           },
           itemCount: _stories.length,
