@@ -13,19 +13,19 @@ class QuickActions extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: Row(
         children: [
-          QuickButton(
+          _QuickButton(
             label: 'Gallery',
             color: Color(0xff92BE87),
             iconData: CustomIcons.photos,
           ),
           SizedBox(width: 15),
-          QuickButton(
+          _QuickButton(
             label: 'Tag Friend',
             color: Color(0xff2880D4),
             iconData: CustomIcons.user_friends,
           ),
           SizedBox(width: 15),
-          QuickButton(
+          _QuickButton(
             label: 'Like',
             color: Color(0xfFFB7171),
             iconData: CustomIcons.video_camera,
@@ -36,8 +36,8 @@ class QuickActions extends StatelessWidget {
   }
 }
 
-class QuickButton extends StatelessWidget {
-  const QuickButton(
+class _QuickButton extends StatelessWidget {
+  const _QuickButton(
       {super.key,
       required this.iconData,
       required this.color,
