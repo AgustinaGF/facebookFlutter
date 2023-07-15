@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:widgest/facebook_ui/widgets/quick_actions.dart';
+import 'package:widgest/facebook_ui/widgets/stories.dart';
 import '../icons/custom_icon_icons.dart';
 import 'widgets/circle_button.dart';
 import 'widgets/what_is_on_your_mind.dart';
@@ -40,17 +41,19 @@ class FacebookUi extends StatelessWidget {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-        ).copyWith(
-          top: 15,
-        ),
         children: const [
+          SizedBox(
+            height: 10,
+          ),
           WhatIsOnYourMind(),
+          SizedBox(
+            height: 30,
+          ),
           QuickActions(),
           SizedBox(
             height: 30,
-          )
+          ),
+          Stories(),
         ],
       ),
     );
