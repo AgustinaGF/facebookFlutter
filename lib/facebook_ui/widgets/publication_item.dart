@@ -57,7 +57,7 @@ class PublicationItem extends StatelessWidget {
           padding: padding,
           child: Row(
             children: [
-              Avatar(size: 38, asset: 'assets/users/1.jpg'),
+              Avatar(size: 38, asset: publication.user.avatar),
               const SizedBox(width: 10),
               Text(publication.user.username),
               const Spacer(),
