@@ -15,12 +15,12 @@ jobs:
           channel: "beta"
 
       - name: Build Flutter Web
-      - run: |
+        run: |
           flutter config --enable-web
           flutter pub get
           flutter build web --release
 
       - name: Firebase Deploy
-      - run: |
+        run: |
           sudo npm install -g firebase-tools
           firebase deploy --token ${{secrets.FIREBASE_TOKEN}}
