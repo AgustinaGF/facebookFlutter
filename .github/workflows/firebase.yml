@@ -1,3 +1,4 @@
+//deploy
 name: Firebase CI deploy
 
 on:
