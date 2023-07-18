@@ -19,8 +19,7 @@ jobs:
           flutter config --enable-web
 
       - name: Install dependencies
-        run: |
-          flutter packages get
+        run: flutter packages get
 
       - name: Build web
         run: flutter build web
