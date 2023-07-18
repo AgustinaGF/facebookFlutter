@@ -44,6 +44,14 @@ class PublicationItem extends StatelessWidget {
 
     return Container(
       width: double.infinity,
+      decoration: const BoxDecoration(
+        border: Border(
+          top: BorderSide(
+            width: 6,
+            color: Color(0xffEBEBEB),
+          ),
+        ),
+      ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
           padding: padding,
@@ -57,16 +65,21 @@ class PublicationItem extends StatelessWidget {
             ],
           ),
         ),
-        CachedNetworkImage(
-          imageUrl: publication.imageUrl,
-          height: 180,
-          width: double.infinity,
-          fit: BoxFit.cover,
+        AspectRatio(
+          aspectRatio: 16 / 9,
+          child: CachedNetworkImage(
+            imageUrl: publication.imageUrl,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
         ),
         Padding(
           padding: padding.copyWith(top: 15),
           child: Text(
             publication.title,
+            style: const TextStyle(
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         Padding(
