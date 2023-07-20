@@ -18,8 +18,10 @@ jobs:
         run: |
           flutter config --enable-web
 
+      - name: upgrade
+        run: flutter upgrade
+
       - name: Install dependencies
-        run: flutter upgrade 
         run: flutter packages get
 
       - name: Build web
