@@ -14,21 +14,15 @@ jobs:
         with:
           channel: "beta"
 
-      - name: Enable Flutter Web
+      - name: Buil Flutter Web
         run: |
           flutter config --enable-web
+          flutter pub get
+          flutter build web --release
 
-      - name: upgrade
-        run: flutter upgrade
 
-      - name: Install dependencies
-        run: flutter packages get
+      - name: Firebase Deploy
+        run: |
+        sudo npm install -g firebase-tools
+        firebase deploy --token ${{secrets.FIREBASE_TOKEN}}
 
-      - name: Build web
-        run: flutter build web
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{secrets.FIREBASE_TOKEN}}
-          publish_dir: ./build/web
