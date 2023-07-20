@@ -18,9 +18,6 @@ jobs:
         run: |
           flutter config --enable-web
 
-      - name: Install dependencies dart
-        run: dart pub get
-
       - name: Install dependencies
         run: flutter packages get
 

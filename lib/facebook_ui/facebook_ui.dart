@@ -10,6 +10,7 @@ import '../icons/custom_icon_icons.dart';
 import 'widgets/circle_button.dart';
 import 'widgets/what_is_on_your_mind.dart';
 
+// ignore: use_key_in_widget_constructors
 class FacebookUi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

@@ -8,9 +8,9 @@ class QuickActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //este widget ayuda a desaparecer el error de overflow
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: const FittedBox(
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: FittedBox(
         fit: BoxFit.scaleDown,
         alignment: Alignment.centerLeft,
         child: Row(
@@ -41,10 +41,7 @@ class QuickActions extends StatelessWidget {
 
 class _QuickButton extends StatelessWidget {
   const _QuickButton(
-      {super.key,
-      required this.iconData,
-      required this.color,
-      required this.label});
+      {required this.iconData, required this.color, required this.label});
 
   final IconData iconData;
   final Color color;
