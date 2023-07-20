@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v1.4.0
         with:
-          channel: "beta"
+          sdk: [3.0.3, stable, beta, dev]
 
       - name: Enable Flutter Web
         run: |
